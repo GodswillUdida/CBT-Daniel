@@ -23,7 +23,7 @@ const FirstTimeLogin = () => {
     }
   }, [navigate]);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
@@ -92,7 +92,6 @@ const FirstTimeLogin = () => {
             </div>
           )}
 
-          {/* Step 2 */}
           {step === 2 && (
             <div>
               <label className="block mb-2 font-medium">
