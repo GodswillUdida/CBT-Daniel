@@ -8,33 +8,33 @@ const fadeInLeft = {
 
 const TeachingService = () => {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center bg-pink-100">
+    <section className="min-h-screen flex items-center justify-center bg-pink-100 px-6">
       <motion.div
         initial="hidden"
         animate="visible"
         variants={fadeInLeft}
-        className="w-[95%] max-w-6xl flex flex-col md:flex-row items-center justify-between p-6 gap-6"
+        className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-12"
       >
-        <article className="w-full md:w-[48%] flex flex-col justify-center p-6 text-white">
-          <div className="w-16 h-1 bg-black mb-2"></div>
-          <h1 className="text-3xl sm:text-4xl text-black font-bold mb-5">
+        <article className="flex-1 text-black">
+          <div className="w-16 h-1 bg-black mb-3"></div>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-5">
             Trustworthy And Efficient Exam Practice System.
           </h1>
-          <p className="mb-6 text-gray-700">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+          <p className="text-gray-700 text-lg mb-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
             excepturi odio voluptate quia nisi illum nulla libero quae
             recusandae.
           </p>
 
-          <div className="flex flex-wrap gap-6 mt-6">
+          <div className="flex flex-wrap gap-6">
             {[1, 2].map((_, i) => (
               <motion.div
                 key={i}
-                className="w-full sm:w-[250px] h-[200px] bg-white flex flex-col items-center justify-center rounded-lg border border-gray-400 shadow-md hover:shadow-[0px_4px_2px_2px_red] transition-shadow p-4"
+                className="w-full sm:w-[250px] h-[200px] bg-white flex flex-col items-center justify-center rounded-lg border border-gray-400 shadow-md hover:shadow-red-400 transition-shadow p-4"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <p className="text-black text-center text-sm font-semibold mt-2">
+                <p className="text-black text-center text-sm font-semibold">
                   Feugiat pretium nibh ipsum consequat nisl vel pretium lectus
                   quam
                 </p>
@@ -50,18 +50,17 @@ const TeachingService = () => {
               <div className="w-10 h-10 bg-black flex items-center justify-center rounded-full">
                 <span className="text-lg">📞</span>
               </div>
-              <p className="text-black text-lg">
-                Call us anytime +234 7010 187793
-              </p>
+              <p className="text-lg">Call us anytime +234 7010 187793</p>
             </div>
           </div>
         </article>
 
-        <div className="w-full md:w-[48%] max-h-[500px] flex items-center justify-center">
+        <div className="flex-1 flex justify-center">
           <img
             src={pic}
             alt="Teaching Service"
-            className="w-full h-full object-contain rounded-lg"
+            className="w-full h-auto max-h-[600px] object-cover rounded-lg shadow-lg"
+            loading="lazy"
           />
         </div>
       </motion.div>

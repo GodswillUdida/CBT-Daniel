@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section
       className="w-full min-h-screen flex items-center justify-center bg-gray-300 bg-opacity-40 pt-[120px] bg-cover bg-center"
-      style={{ backgroundImage: `url(${img})` }}
+      style={{ backgroundImage: `url(${img})`  }}
     >
       <div className="w-[95%] h-full flex flex-col lg:flex-row items-center">
         <div className="max-w-3xl px-6 text-left">
